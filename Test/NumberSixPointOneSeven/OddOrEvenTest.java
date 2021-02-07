@@ -1,4 +1,4 @@
-package NumberSixPointOneSix;
+package NumberSixPointOneSeven;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MultiplesTest {
+class OddOrEvenTest {
 
     @BeforeEach
     void setUp() {
@@ -17,9 +17,9 @@ class MultiplesTest {
     }
 
     @Test
-    void testToCheckForMultiples(){
-        Multiples.isMultiples(2,4);
-        assertTrue(Multiples.isMultiples(2,6));
-        assertFalse(Multiples.isMultiples(3,19));
+    void testToCheckForEvenNumber(){
+        OddOrEven.isEven(4);
+        assertTrue(OddOrEven.isEven(4));
+        assertFalse(OddOrEven.isEven(7));
     }
 }

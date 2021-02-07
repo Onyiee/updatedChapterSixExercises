@@ -16,41 +16,31 @@ public class GuessNumber {
 
     SecureRandom rand = new SecureRandom();
     int randomNumber;
-    public GuessNumber(){
-        randomNumber= rand.nextInt(20);
-        randomNumber += 1;
+
+    public GuessNumber() {
+        randomNumber = 1 + rand.nextInt(1000);
+
     }
 
-    public int compareRandomNumber(int userGuess){
-        if(userGuess < randomNumber){
-            System.out.println("Number is too low, try again");
-            return -1;
-        }
-        if(userGuess > randomNumber){
-            System.out.println("Number is too high, try again");
-            return 1;
+    public int compareRandomNumber(int userGuess) {
+        if (userGuess >0 && userGuess <= 1000) {
+            if (userGuess < randomNumber) {
+                return -1;
+            }
+            if (userGuess > randomNumber) {
+                return 1;
+            } else {
+                return 0;
+            }
         } else {
-            System.out.println("Congratulations! Do you want to play again?");
-            System.out.println("Exit");
-            return 0;
+            return -1000;
         }
 
-    }
-    public void resetRandomNumber(){
-        if (randomNumber <= 1 || randomNumber >= 20){
-            randomNumber = rand.nextInt(20);
-            randomNumber += 1;
-        }
 
     }
 
-    private void setRandomNumber(int randomNumber)
-      {
-            SecureRandom random = new SecureRandom();
-            this.randomNumber = randomNumber;
+    public void resetRandomNumber() {
+            randomNumber = 1 + rand.nextInt(1000);
     }
 
-    private int getRandomNumber(){
-        return randomNumber;
-    }
 }
