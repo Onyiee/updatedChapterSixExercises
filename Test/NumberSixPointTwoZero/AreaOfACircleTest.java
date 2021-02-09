@@ -18,20 +18,20 @@ class AreaOfACircleTest {
     void tearDown() {
     }
 
-    @Test
-    void testThatMethodAcceptsPi(){
-        areaOfACircle.setPi(3.142);
-        assertEquals(areaOfACircle.getPi(),3.142);
-    }
-
-    @Test
-    void testThatMethodAcceptsRadius(){
-        areaOfACircle.setRadius(7);
-        assertEquals(7,areaOfACircle.getRadius());
-    }
+//    @Test
+//    void testThatMethodAcceptsPi(){
+//        areaOfACircle.setPi(3.142);
+//        assertEquals(areaOfACircle.getPi(),3.142);
+//    }
+//
+//    @Test
+//    void testThatMethodAcceptsRadius(){
+//        areaOfACircle.setRadius(7);
+//        assertEquals(7,areaOfACircle.getRadius());
+//    }
 
     @Test
     void testToCalculateAreaOfACircle(){
-        assertEquals(153.958,areaOfACircle.circleArea(3.142,7));
+        assertEquals(153.958,areaOfACircle.circleArea(7));
     }
 }
